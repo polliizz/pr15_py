@@ -1,0 +1,14 @@
+class Car:
+    def __init__(self, brand, model, year, color):
+        self.brand = brand
+        self.model = model
+        self.year = year
+        self.color = color
+    def display_info(self):
+        print(f"{self.brand} {self.model} ({self.year}) {self.color}")
+    def change_color(self, new_color):
+        self.color = new_color
+        print(f"Перефарбовано у {self.color}")
+car = Car("Porsche", "Cayenne", 2024, "білий")
+car.display_info()
+car.change_color("чорний")
