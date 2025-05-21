@@ -1,0 +1,22 @@
+class BankAccount:
+    def __init__(self, owner, number, balance):
+        self.owner = owner
+        self.number = number
+        self.balance = balance
+    def deposit(self, amount):
+        self.balance += amount
+        print(f"Поповнення: +{amount} грн. Баланс: {self.balance} грн")
+    def withdraw(self, amount):
+        if amount > self.balance:
+            print("Недостатньо коштів")
+        else:
+            self.balance -= amount
+            print(f"Знято: -{amount} грн. Баланс: {self.balance} грн")
+    def check_balance(self):
+        print(f"Баланс: {self.balance} грн")
+bank = BankAccount("Поліна", "444111466787072", 27000)
+bank.check_balance()
+bank.deposit(100)
+bank.withdraw(3000)
+bank.withdraw(2000)
+bank.withdraw(40000)
